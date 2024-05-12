@@ -1,0 +1,26 @@
+.additional_text {
+    display: none; 
+    margin-top: 10px; 
+}
+
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+ }
+ body.dark-mode .navbar-nav .nav-link {
+    color: #ba0000; 
+ }
+
+ body.dark-mode .banner_taital,
+ body.dark-mode .banner_text,
+ body.dark-mode .types_text,
+ body.dark-mode .looking_text,
+ body.dark-mode .moark_text,
+ body.dark-mode .client_text,
+ body.dark-mode .additional_text,
+ body.dark-mode .date_text,
+ body.dark-mode .prep_text,
+ body.dark-mode .contact_taital {
+    color:#ba0000; 
+ }
