@@ -33,6 +33,12 @@
       <!-- TOASTR JS -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+      <!-- SPAPP -->
+      <script src="./assets/js/jquery.min.js"></script>
+      <script src="./assets/js/jquery.spapp.min.js"></script>
+
+      <link rel="stylesheet" href="./assets/css/spapp.css">
    </head>
    <body>
       <div class="header_section">
@@ -45,20 +51,20 @@
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="#index">Home</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">FAQ</a>
+                        <a class="nav-link" href="#about">FAQ</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="coffees.html">Coffees</a>
+                        <a class="nav-link" href="#coffees">Coffees</a>
                      </li>
                      
                      <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
+                        <a class="nav-link" href="#blog">Blog</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="#" onclick="toggleDarkMode()">Switch Theme</a>
@@ -75,6 +81,24 @@
                </div>
             </nav>
          </div>
+
+         <!-- spapp stuff -->
+         <section id="pageContent">
+            <main id="spapp" role="main">
+                <section id="about" data-load="about.html">
+                    <h1>Page 1</h1>
+                </section>
+                <section id="blog" data-load="blog.html">
+                    <h1>Page 2</h1>
+                </section>
+                <section id="coffees" data-load="coffees.html">
+                    <h1>Page 3</h1>
+                </section>
+                <section id="contact" data-load="contact.html">
+                  <h1>Page 4</h1>
+              </section>
+            </main>
+        </section>
          <!-- banner section start --> 
          <div class="banner_section layout_padding">
             <div class="container">
@@ -403,6 +427,17 @@
             </div>
          </div>
       </div>
+
+      <script>
+         var app = $.spapp({
+            defaultView: "#index",
+            templateDir: "./views/"
+
+        });
+
+
+        app.run();
+      </script>
       <script>
          $(document).ready(function() {
              // Get the image element
