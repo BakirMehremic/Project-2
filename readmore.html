@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="mojcss.css">
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Coffo</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- TOASTR CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+      <!-- TOASTR JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+      <!-- SPAPP -->
+      <script src="./assets/js/jquery.min.js"></script>
+      <script src="./assets/js/jquery.spapp.min.js"></script>
+
+      <link rel="stylesheet" href="./assets/css/spapp.css">
+
+
+      <!-- custom css -->
+      <link rel="stylesheet" href="mojcss.css">
+      <!-- jquery validation -->
+      <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+
+      <style>
+         .country-list {
+             color: white;
+         }
+     </style>
+   </head>
+   <body>
+      <div class="header_section">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand"href="index.html"><img src="images/logo.png"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#index">Home</a>
+                     
+                     
+               </div>
+            </nav>
+         </div>
+
+
+
+
+
+
+      <!-- page content -->
+      <body style="background-color: #333;">
+         <div class="container mt-5">
+             <div class="row">
+                 <div class="col-md-4">
+                     <div id="column1" class="country-list"></div>
+                 </div>
+                 <div class="col-md-4">
+                     <div id="column2" class="country-list"></div>
+                 </div>
+                 <div class="col-md-4">
+                     <div id="column3" class="country-list"></div>
+                 </div>
+             </div>
+         </div>
+
+
+
+
+
+
+      
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="footer_social_icon">
+                     <ul>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+                  <div class="location_text">
+                     <ul>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">+01 1234567890</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">demo@gmail.com</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free Html Templates</a>
+                     Distribution by <a href="https://themewagon.com">ThemeWagon</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      
+      
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+
+      <script>
+         $(document).ready(function() {
+             $.ajax({
+                 url: 'https://restcountries.com/v3.1/all', 
+                 type: 'GET',
+                 dataType: 'json',
+                 success: function (data) {
+                     console.log(data);
+                     let column1 = "";
+                     let column2 = "";
+                     let column3 = "";
+                     // Split data into three columns
+                     for (let i = 0; i < data.length; i++) {
+                         if (i % 3 === 0) {
+                             column1 += '<p>' + data[i].name.common + '</p>';
+                         } else if (i % 3 === 1) {
+                             column2 += '<p>' + data[i].name.common + '</p>';
+                         } else {
+                             column3 += '<p>' + data[i].name.common + '</p>';
+                         }
+                     }
+                     // Insert HTML into respective columns
+                     $("#column1").html(column1);
+                     $("#column2").html(column2);
+                     $("#column3").html(column3);
+                 },
+                 error: function (xhr, status, error) {
+                     console.error('Error fetching data:', error);
+                     $("#column1").html("<p>Failed to fetch data.</p>");
+                     $("#column2").html("<p>Failed to fetch data.</p>");
+                     $("#column3").html("<p>Failed to fetch data.</p>");
+                 }
+             });
+         });
+     </script>
+     
+      </div>
+   </body>
+</html>

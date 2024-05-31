@@ -24,3 +24,8 @@ body.dark-mode {
  body.dark-mode .contact_taital {
     color:#ba0000; 
  }
+
+.error {
+   color: red;
+   margin-top: 5px;
+ }

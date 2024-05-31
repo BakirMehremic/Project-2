@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
       <link rel="stylesheet" href="mojcss.css">
       <!-- basic -->
       <meta charset="utf-8">
@@ -39,6 +40,13 @@
       <script src="./assets/js/jquery.spapp.min.js"></script>
 
       <link rel="stylesheet" href="./assets/css/spapp.css">
+
+
+      <!-- custom css -->
+      <link rel="stylesheet" href="mojcss.css">
+      <!-- jquery validation -->
+      <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+
    </head>
    <body>
       <div class="header_section">
@@ -125,8 +133,8 @@
                                  <h1 class="banner_taital">Coffee <br>Shop</h1>
                                  <p class="banner_text">more-or-less normal distribution of letters, as opposed to using </p>
                                  <div class="btn_main">
-                                    <div class="about_bt active"><a href="#">About Us</a></div>
-                                    <div class="callnow_bt"><a href="#">Call Now</a></div>
+                                    <div class="about_bt active"><a href="#" onclick="aboutToastr()">About Us</a></div>
+                                    <div class="callnow_bt"><a href="#" onclick="callToastr()">Call Now</a></div>
                                  </div>
                               </div>
                            </div>
@@ -139,8 +147,8 @@
                                  <h1 class="banner_taital">Coffee <br>Shop</h1>
                                  <p class="banner_text">more-or-less normal distribution of letters, as opposed to using </p>
                                  <div class="btn_main">
-                                    <div class="about_bt active"><a href="#">About Us</a></div>
-                                    <div class="callnow_bt"><a href="#">Call Now</a></div>
+                                    <div class="about_bt active"><a href="#" onclick="aboutToastr()">About Us</a></div>
+                                    <div class="callnow_bt"><a href="#" onclick="callToastr()">Call Now</a></div>
                                  </div>
                               </div>
                            </div>
@@ -169,7 +177,7 @@
                         <h1 class="about_taital">About Our shop</h1>
                         <h1 class="about_taital_1">Coffee distribution '</h1>
                         <p class=" about_text">has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editorhas a more-or-less normal distribution of letters, as oppos</p>
-                        <div class="readmore_btn"><a href="#">Read More</a></div>
+                        <div class="readmore_btn"><a href="readmore.html">Read More</a></div>
                      </div>
                   </div>
                   <div class="col-md-6"> 
@@ -194,7 +202,7 @@
                <div class="carousel-inner">
                   <div class="carousel-item active">
                      <div class="container-fluid">
-                        <div class="row">
+                        <div class="row mb-5">
                                                 
                            <div class="col-lg-3 col-md-6">
                               <div class="coffee_img">
@@ -244,142 +252,57 @@
       <!-- coffee section end -->
      
 
-      <!-- client section start -->
-      <div class="client_section layout_padding">
-         <div class="container">
-            <div id="custom_slider" class="carousel slide" data-ride="carousel">
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="row">
-                        <div class="col-md-12">
-                           <h1 class="about_taital">What syas customers</h1>
-                        </div>
-                     </div>
-                     <div class="client_section_2">
-                        <div class="client_taital_main">
-                           <div class="client_left">
-                              <div class="client_img"><img src="images/client-img1.png"></div>
-                           </div>
-                           <div class="client_right">
-                              <h3 class="moark_text">Joy Moark</h3>
-                              <p class="client_text">now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancynow use Lorem Ipsum as their default model text, </p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="row">
-                        <div class="col-md-12">
-                           <h1 class="about_taital">What syas customers</h1>
-                        </div>
-                     </div>
-                     <div class="client_section_2">
-                        <div class="client_taital_main">
-                           <div class="client_left">
-                              <div class="client_img"><img src="images/client-img1.png"></div>
-                           </div>
-                           <div class="client_right">
-                              <h3 class="moark_text">Joy Moark</h3>
-                              <p class="client_text">now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancynow use Lorem Ipsum as their default model text, </p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="row">
-                        <div class="col-md-12">
-                           <h1 class="about_taital">What syas customers</h1>
-                        </div>
-                     </div>
-                     <div class="client_section_2">
-                        <div class="client_taital_main">
-                           <div class="client_left">
-                              <div class="client_img"><img src="images/client-img1.png"></div>
-                           </div>
-                           <div class="client_right">
-                              <h3 class="moark_text">Joy Moark</h3>
-                              <p class="client_text">now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancynow use Lorem Ipsum as their default model text, </p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <a class="carousel-control-prev" href="#custom_slider" role="button" data-slide="prev">
-               <i class="fa fa-arrow-left"></i>
-               </a>
-               <a class="carousel-control-next" href="#custom_slider" role="button" data-slide="next">
-               <i class="fa fa-arrow-right"></i>
-               </a>
-            </div>
-         </div>
+      
+      <!--  data driven content  -->
+      
+      <div class="col align-self-center mt-2">
+         <h1>JSON driven content</h1>
+         <div id="posts-container" class="col"></div>
+         <div class="success-message" id="success-message">It works!</div>
       </div>
-      <!-- client section end -->
-      <!-- blog section start -->
-      <div class="blog_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h1 class="about_taital">Our Blog</h1>
-               </div>
-            </div>
-            <div class="blog_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="blog_box">
-                        <div class="blog_img"><img src="images/blog-img1.png"></div>
-                        <h4 class="date_text">05 April</h4>
-                        <h4 class="prep_text">PREP TECHNIQUES Coffee</h4>
-                        <p class="lorem_text">distracted by the readable content of a page when looking at its layout.</p>
-                        <p class="additional_text" style="display: none;">The point of using Lorem Ipsum is that it has a moredistracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more</p>
-                     </div>
-                     <div class="read_btn"><a href="#" onclick="readMore(event)">Read More</a></div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="blog_box">
-                        <div class="blog_img"><img src="images/blog-img2.png"></div>
-                        <h4 class="date_text">05 April</h4>
-                        <h4 class="prep_text">Enjoy Best Coffee</h4>
-                        <p class="lorem_text">distracted by the readable content of a page when looking at its layout. </p><!-- Additional Text -->
-                        <p class="additional_text" style="display: none;">The point of using Lorem Ipsum is that it has a moredistracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more</p>
-                     </div>
-                     <div class="read_btn"><a href="#" onclick="readMore(event)">Read More</a></div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- blog section end -->
+
+      <!-- end data driven content  -->
+      
       <!-- contact section start -->
+      
       <div class="contact_section layout_padding">
          <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <h1 class="contact_taital">Get In Touch</h1>
-               </div>
+         <div class="row">
+            <div class="col-sm-12">
+               <h1 class="contact_taital">Get In Touch</h1>
             </div>
+         </div>
          </div>
          <div class="container-fluid">
-            <div class="contact_section_2">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="mail_section_1">
-                        <input type="text" class="mail_text" placeholder="Your Name" name="Your Name">
-                        <input type="text" class="mail_text" placeholder="Your Email" name="Your Email">
-                        <input type="text" class="mail_text" placeholder="Your Phone" name="Your Phone">
-                        <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                        <div class="send_bt"><a href="#">Send</a></div>
+         <div class="contact_section_2">
+            <div class="row">
+               <div class="col-md-12">
+               <form id="contactForm">
+                  <div class="mail_section_1">
+                     <input type="text" class="mail_text" placeholder="Your Name" name="yourName" id="yourName">
+                     <input type="text" class="mail_text" placeholder="Your Email" name="yourEmail" id="yourEmail">
+                     <input type="text" class="mail_text" placeholder="Your Phone" name="yourPhone" id="yourPhone">
+                     <textarea class="massage-bt" placeholder="Massage" rows="5" id="message" name="message"></textarea>
+                     <div class="send_bt">
+                     <a href="#" id="submitForm">Send</a>
                      </div>
                   </div>
-                  <div class="map_main">
-                     <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="250" height="500" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-                     </div>
-                  </div>
+               </form>
+               <div class="success-message">Your data has been successfully saved!</div>
+               </div>
+               <div class="map_main">
+               <div class="map-responsive">
+                  <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France"
+                     width="250" height="500" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+               </div>
                </div>
             </div>
          </div>
+         </div>
       </div>
+
       <!-- contact section end -->
+      
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
@@ -464,19 +387,21 @@
  
          
       </script>
+
       <script>
+      
             //read more button
-             function readMore(event) {
-               event.preventDefault(); 
-               const additionalText = event.target.parentElement.previousElementSibling.querySelector('.additional_text');
-               if (additionalText.style.display === 'none') {
-                     additionalText.style.display = 'block';
-                     event.target.textContent = 'Read Less'; 
-               } else {
-                     additionalText.style.display = 'none';
-                     event.target.textContent = 'Read More'; 
-               }
+         function readMore(event) {
+            event.preventDefault(); 
+            const additionalText = event.target.parentElement.previousElementSibling.querySelector('.additional_text');
+            if (additionalText.style.display === 'none') {
+                  additionalText.style.display = 'block';
+                  event.target.textContent = 'Read Less'; 
+            } else {
+                  additionalText.style.display = 'none';
+                  event.target.textContent = 'Read More'; 
             }
+         }
        </script>
        <script>
          //toggle dark mode
@@ -487,6 +412,134 @@
          }
 
       </script>
+      <script>
+         $(document).ready(function() {
+           // Initialize form validation
+           $("#contactForm").validate({
+             rules: {
+               yourName: {
+                 required: true,
+                 minlength: 2
+               },
+               yourEmail: {
+                 required: true,
+                 email: true
+               },
+               yourPhone: {
+                 required: true,
+                 digits: true,
+                 minlength: 10,
+                 maxlength: 15
+               },
+               message: {
+                 required: true,
+                 minlength: 5
+               }
+             },
+             messages: {
+               yourName: {
+                 required: "Please enter your name",
+                 minlength: "Your name must be at least 2 characters long"
+               },
+               yourEmail: {
+                 required: "Please enter your email address",
+                 email: "Please enter a valid email address"
+               },
+               yourPhone: {
+                 required: "Please enter your phone number",
+                 digits: "Please enter only digits",
+                 minlength: "Your phone number must be at least 10 digits long",
+                 maxlength: "Your phone number must not exceed 15 digits"
+               },
+               message: {
+                 required: "Please enter a message",
+                 minlength: "Your message must be at least 5 characters long"
+               }
+             },
+             errorElement: "div",
+             errorPlacement: function(error, element) {
+               error.addClass("error");
+               error.insertAfter(element);
+             },
+             submitHandler: function(form) {
+               // AJAX form submission
+               $.ajax({
+                 url: "#",  
+                 type: "POST",
+                 data: $(form).serialize(),
+                 success: function() {
+                   $(".success-message").show();
+                   $(form).find("input[type=text], textarea").val(""); 
+                 }
+               });
+             }
+           });
+       
+           $("#contactForm").on("click", function() {
+             $("#contactForm").submit();
+             return false;
+           });
+         });
+       </script>
+
+      <script>
+         // Sample JSON data
+         const postsData = [
+         { "id": 1, "title": "First coffee", "content": "This is the first coffee content." },
+         { "id": 2, "title": "Second coffee", "content": "This is the second coffee content." },
+         { "id": 3, "title": "Third coffee", "content": "This is the third coffee content." }
+         ];
+
+         $(document).ready(function() {
+         // Load  data
+         function loadPosts() {
+            $('#posts-container').empty();
+            $.each(postsData, function(index, post) {
+               $('#posts-container').append(`
+               <div class="card">
+               <div class="post" data-id="${post.id}">
+                  <h2>${post.title}</h2>
+                  <h4>${post.content}</h4>
+                  <button class="edit btn-lg btn-primary">Edit</button>
+                  <button class="delete btn-lg btn-danger">Delete</button>
+               </div>
+               </div>
+               `);
+            });
+         }
+
+         // Initial load
+         loadPosts();
+
+         // Edit post
+         $(document).on('click', '.edit', function() {
+            const postId = $(this).parent().data('id');
+            const post = postsData.find(post => post.id === postId);
+            const newTitle = prompt('Enter new title:', post.title);
+            const newContent = prompt('Enter new content:', post.content);
+            if (newTitle !== null && newContent !== null) {
+               post.title = newTitle;
+               post.content = newContent;
+               loadPosts();
+               $('#success-message').text('coffe edited successfully!').show().delay(2000).fadeOut();
+            }
+         });
+
+         // Delete post
+         $(document).on('click', '.delete', function() {
+            const postId = $(this).parent().data('id');
+            const postIndex = postsData.findIndex(post => post.id === postId);
+            if (postIndex !== -1) {
+               postsData.splice(postIndex, 1);
+               loadPosts();
+               $('#success-message').text('coffee deleted successfully!').show().delay(2000).fadeOut();
+            }
+         });
+         });
+      </script>
+       
+         
+      
       <!-- copyright section end -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
